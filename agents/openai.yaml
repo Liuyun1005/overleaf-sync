@@ -1,0 +1,4 @@
+interface:
+  display_name: "Overleaf Git 同步"
+  short_description: "安装配置 Git、获取 Overleaf 令牌，安全下载同步与上传论文源码"
+  default_prompt: "使用 $overleaf-git-sync 帮我配置 Overleaf 的 Git 同步，指导获取认证令牌并验证下载或上传。"
