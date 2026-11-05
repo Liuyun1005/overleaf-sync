@@ -29,6 +29,25 @@ Git 提交署名与 Overleaf 登录身份不同。不要无故修改全局换行
 
 ## 2. 引导获取远端地址和“密码”
 
+### 首次设置时主动展示截图
+
+用户首次连接 Overleaf、首次设置 Git 认证，或不知道设置入口时，agent 必须在面向用户的回复中展示下列截图，并结合当前步骤解释箭头位置；不能只在内部查看图片或仅给出文件路径。日常已配置好的拉取/推送不重复展示，除非用户需要定位入口。
+
+- 第一步展示 `assets/overleaf-project-git.png`：请用户打开自己的 Overleaf 项目，点击左侧箭头所指的 **Integrations** 图标，再点击面板中的 **Git**（不是上方的 GitHub），获取项目的 Git 地址。
+- 第二步展示 `assets/overleaf-account-tokens.png`：请用户打开 [Account Settings](https://www.overleaf.com/user/settings)，找到 **Project synchronisation → Git integration → Your Git authentication tokens**；点击 **Add another token** 或当前界面对应的生成按钮。图中的掩码 token 行只是已有令牌列表的位置示例，不是可复制使用的密码，也不能点击该行取回完整旧令牌。新令牌由用户自行保存并在本机认证提示中输入，不发送到聊天。
+
+截图是随技能分发的资源。展示时以当前 `SKILL.md` 所在目录为根解析上述相对路径，在支持本地图片的客户端使用 `![说明](实际绝对路径)` 嵌入；必须替换成实际安装路径，不写死作者电脑路径，不把占位路径原样发给用户。若客户端仅支持托管图片，使用下方仓库图片链接嵌入；若图片无法内联显示，说明限制并提供可点击的图片链接和对应文字步骤，不声称已展示成功。
+
+![项目内的 Integrations 和 Git 入口](assets/overleaf-project-git.png)
+
+![账户设置中的 Git integration 和令牌区域](assets/overleaf-account-tokens.png)
+
+托管图片备用地址：
+- https://raw.githubusercontent.com/Liuyun1005/overleaf-sync/main/assets/overleaf-project-git.png
+- https://raw.githubusercontent.com/Liuyun1005/overleaf-sync/main/assets/overleaf-account-tokens.png
+
+这些截图仅用于定位控件，不代表使用者的账户、订阅状态、令牌数量或有效期。界面改变时按实际标签和官方文档引导；不要依据示例中的 Upgrade 按钮让用户购买无关的 GitHub Sync 或 Dropbox 功能。
+
 Overleaf Cloud 的 Git 集成需要项目具备对应权益；学校订阅可能提供权益，以项目实际可见功能为准。Server Pro 还取决于管理员配置。Git 同步与 GitHub 同步不是同一功能，不要求用户创建 GitHub 仓库。
 
 1. 请用户登录 Overleaf 并打开目标项目，在左侧 **Integrations → Git** 中复制 Git 地址；旧界面可能在 Menu 中。优先复用登录会话；操作浏览器时遵守可用浏览器工具的使用说明。
